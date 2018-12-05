@@ -1,0 +1,51 @@
+<input
+  onchange="angular.element(this).scope().onFileSelected(this)"
+  type="file"
+  id="file"
+  class="d-none"
+  accept=".pdf"
+/>
+<div class="toolbar d-flex">
+  <span
+    class="my-icon"
+    ng-include="'icon/baseline-open_in_browser-24px.svg'"
+    ng-click="openLocalFile()"
+    title="Open File"
+  ></span>
+  <span
+    class="my-icon"
+    ng-include="'icon/baseline-rotate_right-24px.svg'"
+    ng-click="rotate()"
+    title="Rotate Right"
+  ></span>
+  <span
+    class="my-icon"
+    ng-include="'icon/baseline-zoom_in-24px.svg'"
+    ng-click="zoomIn()"
+    title="Zoom In"
+  ></span>
+  <span
+    class="my-icon"
+    ng-include="'icon/baseline-zoom_out-24px.svg'"
+    ng-click="zoomOut()"
+    title="Zoom Out"
+  ></span>
+
+  <span
+    class="my-icon ml-auto"
+    ng-include="'icon/baseline-navigate_before-24px.svg'"
+    ng-click="goPrevious()"
+    title="Previous Page"
+  ></span>
+  <div>
+    <input type="number" class="page-num" min="1" ng-model="pageNum" />
+    <span>/ {{ pageCount }}</span>
+  </div>
+  <span
+    class="my-icon"
+    ng-include="'icon/baseline-navigate_next-24px.svg'"
+    ng-click="goNext()"
+    title="Next Page"
+  ></span>
+</div>
+{{ loading }}

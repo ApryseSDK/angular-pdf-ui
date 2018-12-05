@@ -1,0 +1,90 @@
+*{box-sizing: border-box;}
+.wrapper {margin: 0 auto; width: 960px; }
+.pdf-controls { width: 100%; display: block; background: #eee; padding: 1em;}
+.rotate0 {-webkit-transform: rotate(0deg); transform: rotate(0deg); }
+.rotate90 {-webkit-transform: rotate(90deg); transform: rotate(90deg); }
+.rotate180 {-webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.rotate270 {-webkit-transform: rotate(270deg); transform: rotate(270deg); }
+.fixed { position: fixed; top: 0; left: calc(50% - 480px); z-index: 100; width: 100%; padding: 1em; background: rgba(238, 238, 238,.9); width: 960px; }
+
+
+.toolbar {
+	background: #303030;
+	padding: 10px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+}
+
+.toolbar span {
+	color: white;
+}
+
+.my-icon {
+	margin: 0 7px;
+	cursor: pointer;
+}
+
+.my-icon:hover {
+	opacity: 0.5;
+}
+
+.my-icon.active {
+	opacity: 0.5;
+}
+
+.my-icon.active:hover {
+	opacity: 1;
+}
+
+.page-num {
+	width: 50px;
+	border: 0;
+	margin-right: 2px;
+	text-align: center;
+}
+
+.searchbox {
+	width: 0;
+	opacity: 0;
+	transition: all 0.3s ease-out;
+	border: 0px;
+	padding: 0 3px;
+}
+
+.searchbox:focus, .searchbox:active {
+	outline: 0;
+	box-shadow: none;
+}
+
+.searchbox:focus {
+	opacity: 1;
+	width: 200px;
+}
+
+.pdf-body {
+	margin-top: 46px;
+}
+
+input:focus, input:active {
+	outline: 0;
+	box-shadow: none;
+}
+
+.outline {
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 60px 5px 5px;
+	height: 100vh;
+	width: 250px;
+	z-index: 9000;
+	box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.75);
+	background: white;
+}
+
+.outline ul {
+	padding-left: 25px;
+}
