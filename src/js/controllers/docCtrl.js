@@ -1,6 +1,5 @@
 app.controller('DocCtrl', function($scope) {
-  $scope.pdfName =
-    'PDFTron SDK';
+  $scope.pdfName = 'PDFTron SDK';
   $scope.pdfUrl = 'pdf/pdftron-sdk.pdf';
   $scope.pdfPassword = 'test';
   $scope.scroll = 0;
